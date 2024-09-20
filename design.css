@@ -1,4 +1,50 @@
-p {
-    color: blue;
-    font: sans-serif;
-}
+/* Styling for the navigation bar */
+nav {
+    background-color: #c08787;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Space between logo and nav items */
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Styling for the logo */
+  .logo img {
+    height: 100px; /* Adjust logo size */
+    width: auto;
+  }
+  
+  /* Styling for the navigation list */
+  .nav-list {
+    list-style-type: none;
+    display: flex; /* Flexbox for horizontal alignment */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-list li {
+    margin-left: 20px; /* Spacing between nav items */
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+  }
+  
+  .nav-list a:hover {
+    background-color: #b47070;
+    border-radius: 5px;
+  }
+
+  .nav-list input[type="text"] {
+    border: none;
+    background-color: #c08787;
+    border-bottom: 2px solid rgb(177, 3, 3);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+
+  .nav-list input[type="text"]::placeholder {
+    color: white;
+  }
