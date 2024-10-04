@@ -1,13 +1,22 @@
 /* Styling for the navigation bar */
 nav {
-    background-color: #c08787;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center; /* Aligns items vertically in the center */
-    justify-content: space-between; /* Space between logo and nav items */
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  background-color: #c08787; /* Background color */
+  padding: 10px 20px; /* Padding around the nav */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between logo and nav items */
+  font-family: Arial, Helvetica, sans-serif; /* Font family */
+  position: sticky; /* Make the nav sticky */
+  z-index: 999; /* Ensure it stays above other content */
+  top: 0; /* Stick to the top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+}
 
+  body {
+    margin: 0;
+    background-color: #d4d1d1;
+  }
+  
   /* Styling for the logo */
   .logo img {
     height: 100px; /* Adjust logo size */
@@ -48,3 +57,81 @@ nav {
   .nav-list input[type="text"]::placeholder {
     color: white;
   }
+
+  .products-mainPage {
+    display: flex;
+  }
+
+  #mainProduct {
+    margin: 0px;
+    display: flex;
+    padding: 0%;
+    height: auto;
+    width: 50%;
+  }
+
+  .productNav {
+    display: flex;
+    padding-top: 70px;
+    justify-content: center;
+    position: relative; 
+    height: 100px;
+    z-index: 1;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("banner1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    opacity: 0.5; 
+    z-index: 0;
+}
+
+.productNav button {
+  position: relative;
+  text-decoration: underline;
+  transform: translateX(40px);
+  z-index: 1;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  background-color: #b35b5b;
+  border-radius: 20px;
+  width: 500px;
+  border: none;
+}
+
+.productNav button:hover {
+  background-color: #df9696;
+  border-style: solid;
+  border-radius: 20px;
+  width: 500px;
+}
+
+.advertising {
+  justify-content: space-between;
+  display: flex;
+}
+
+.advertising1 {
+  background-image: url("product3.jpg");
+  padding-inline: 10px;
+  padding-top: 10px;
+  width: 300px;
+  height: 400px;
+  border-radius: 50px;
+}
+
+.advertising2 {
+  background-image: url("product2.jpg");
+  padding-inline: 10px;
+  padding-top: 10px;
+  width: 300px;
+  height: 400px;
+  border-radius: 50px;
+}
