@@ -124,9 +124,14 @@ nav {
   background-size: cover;
   padding-inline: 10px;
   padding-top: 10px;
-  width: 300px;
+  width: 30%;
   height: 400px;
-  border-radius: 50px;
+}
+
+.advertising1 h3 {
+  
+  justify-content: center;
+
 }
 
 .advertising2 {
@@ -135,7 +140,17 @@ nav {
   background-size: cover;
   padding-inline: 10px;
   padding-top: 10px;
-  width: 300px;
+  width: 30%;
   height: 400px;
-  border-radius: 50px;
 }
+
+.advertising3 {
+  background-image: url("product1.jpg");
+  background-position: center;
+  background-size: cover;
+  padding-inline: 10px;
+  padding-top: 10px;
+  width: 30%;
+  height: 400px;
+}
+
