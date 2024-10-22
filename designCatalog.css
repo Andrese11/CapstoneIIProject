@@ -1,0 +1,46 @@
+nav {
+    background-color: #c08787; /* Background color */
+    padding: 10px 20px; /* Padding around the nav */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and nav items */
+    font-family: Arial, Helvetica, sans-serif; /* Font family */
+    position: sticky; /* Make the nav sticky */
+    z-index: 999; /* Ensure it stays above other content */
+    top: 0; /* Stick to the top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+  }
+  
+    body {
+      margin: 0;
+      background-color: #d4d1d1;
+    }
+    
+    /* Styling for the logo */
+    .logo img {
+      height: 100px; /* Adjust logo size */
+      width: auto;
+    }
+    
+    /* Styling for the navigation list */
+    .nav-list {
+      list-style-type: none;
+      display: flex; /* Flexbox for horizontal alignment */
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-list li {
+      margin-left: 20px; /* Spacing between nav items */
+    }
+    
+    .nav-list a {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+    }
+    
+    .nav-list a:hover {
+      background-color: #b47070;
+      border-radius: 5px;
+    }
