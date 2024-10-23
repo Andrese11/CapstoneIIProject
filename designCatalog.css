@@ -1,46 +1,182 @@
 nav {
-    background-color: #c08787; /* Background color */
-    padding: 10px 20px; /* Padding around the nav */
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Space between logo and nav items */
-    font-family: Arial, Helvetica, sans-serif; /* Font family */
-    position: sticky; /* Make the nav sticky */
-    z-index: 999; /* Ensure it stays above other content */
-    top: 0; /* Stick to the top */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+  background-color: #c78c8c; /* Background color */
+  padding: 10px 20px; /* Padding around the nav */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between logo and nav items */
+  position: sticky; /* Make the nav sticky */
+  z-index: 999; /* Ensure it stays above other content */
+  top: 0; /* Stick to the top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+}
+
+  body {
+    margin: 0;
+    background-color: #d4d1d1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
   }
   
-    body {
-      margin: 0;
-      background-color: #d4d1d1;
-    }
+  /* Styling for the logo */
+  .logo img {
+    height: 100px; /* Adjust logo size */
+    width: auto;
+  }
+  
+  /* Styling for the navigation list */
+  .nav-list {
+    list-style-type: none;
+    display: flex; /* Flexbox for horizontal alignment */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-list li {
+    margin-left: 20px; /* Spacing between nav items */
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: large;
+  }
+  
+  .nav-list a:hover {
+    background-color: #b47070;
+    border-radius: 5px;
+  }
+
+  .sorting {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #e4e2e2;
+    height: 6%;
+    width: auto;
+  }
+
+  label {
+    padding-left: 5%;
+    font-size: 16px;
+    margin-right: 10px;
+    color: #333;
+  }
+
+  .sortItems {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  /* On hover */
+  .sortItems:hover {
+    border-color: #aaa;
+  }
+
+  /* On focus (when clicked) */
+  .sortItems:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+  /* Style the dropdown arrow */
+  .sortItems::-ms-expand {
+    display: none;
+  }
+
+  .sortItems option {
+    padding: 10px;
+  }
+
+  .product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+  }
+
+  .product-grid a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .product-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Slightly larger shadow */
+  }
+
+  footer {
+    z-index: 1;
+    background-color: #c78c8c;
+    display: flex;
+    justify-content: space-around; /* Space items in footer */
+    padding: 20px 0;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2); /* Inverted shadow direction */
+    position: relative; /* Ensures footer is positioned properly */
+  }
+  
+  .footLeft {
+    margin: 0%;
+    height: auto;
+    width: 50%;
+    padding-left: 2%;
+  }
+  
+  .footLeft img {
+    height: 100px; /* Adjust logo size */
+    width: auto;
+  }
+  
+  .footRight {
+    margin: 0%;
+    height: auto;
+    width: 50%;
+  }
+  
+  .footRight ul {
+    list-style-type: none;
+  }
+  
+  .footRight a {
+    text-decoration: none;
+    color: black;
     
-    /* Styling for the logo */
-    .logo img {
-      height: 100px; /* Adjust logo size */
-      width: auto;
-    }
-    
-    /* Styling for the navigation list */
-    .nav-list {
-      list-style-type: none;
-      display: flex; /* Flexbox for horizontal alignment */
-      margin: 0;
-      padding: 0;
-    }
-    
-    .nav-list li {
-      margin-left: 20px; /* Spacing between nav items */
-    }
-    
-    .nav-list a {
-      text-decoration: none;
-      color: white;
-      padding: 10px;
-    }
-    
-    .nav-list a:hover {
-      background-color: #b47070;
-      border-radius: 5px;
-    }
+  }
+  
+  .footRight a:hover {
+    text-decoration: none;
+    color: rgb(80, 68, 68);
+    text-decoration: underline;
+  }
+  
+  .footRight li {
+    padding-bottom: 10px;
+  }
+  
+  .footRight h2 {
+    margin-bottom: 0;
+  }

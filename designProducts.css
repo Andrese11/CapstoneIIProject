@@ -1,0 +1,144 @@
+nav {
+  background-color: #c78c8c; /* Background color */
+  padding: 10px 20px; /* Padding around the nav */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between logo and nav items */
+  position: sticky; /* Make the nav sticky */
+  z-index: 999; /* Ensure it stays above other content */
+  top: 0; /* Stick to the top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+}
+  
+body {
+  margin: 0;
+  background-color: #d4d1d1;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+    
+.logo img {
+  height: 100px; /* Adjust logo size */
+  width: auto;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex; /* Flexbox for horizontal alignment */
+  margin: 0;
+  padding: 0;
+}
+    
+.nav-list li {
+  margin-left: 20px; /* Spacing between nav items */
+}
+    
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  font-size: large;
+}
+    
+.nav-list a:hover {
+  background-color: #b47070;
+  border-radius: 5px;
+}
+
+.product {
+  display: flex;
+  padding: 5%;
+}
+
+.product img {
+  padding-left: 3%;
+  width: 40%;
+  height: auto;
+}
+
+.info {
+  padding-left: 3%;
+}
+
+.sortItems {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* On hover */
+.sortItems:hover {
+  border-color: #aaa;
+}
+
+/* On focus (when clicked) */
+.sortItems:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Style the dropdown arrow */
+.sortItems::-ms-expand {
+  display: none;
+}
+
+.sortItems option {
+  padding: 10px;
+}
+
+footer {
+  z-index: 1;
+  background-color: #c78c8c;
+  display: flex;
+  justify-content: space-around; /* Space items in footer */
+  padding: 20px 0;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2); /* Inverted shadow direction */
+  position: relative; /* Ensures footer is positioned properly */
+}
+  
+.footLeft {
+  margin: 0%;
+  height: auto;
+  width: 50%;
+  padding-left: 2%;
+}
+  
+ .footLeft img {
+  height: 100px; /* Adjust logo size */
+  width: auto;
+}
+  
+.footRight {
+  margin: 0%;
+  height: auto;
+  width: 50%;
+}
+  
+.footRight ul {
+  list-style-type: none;
+}
+  
+.footRight a {
+  text-decoration: none;
+  color: black; 
+  }
+  
+.footRight a:hover {
+  text-decoration: none;
+  color: rgb(80, 68, 68);
+  text-decoration: underline;
+}
+  
+.footRight li {
+  padding-bottom: 10px;
+}
+  
+.footRight h2 {
+  margin-bottom: 0;
+}
