@@ -153,6 +153,8 @@ footer {
   padding: 20px 0;
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2); /* Inverted shadow direction */
   position: relative; /* Ensures footer is positioned properly */
+  bottom: 0;
+  width: 100%;
 }
   
 .footLeft {
