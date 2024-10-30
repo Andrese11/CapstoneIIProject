@@ -9,14 +9,13 @@ nav {
   top: 0; /* Stick to the top */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
 }
-  
+    
 body {
   margin: 0;
   background-color: #d4d1d1;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  height: 100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
-    
+      
 /* Styling for the logo */
 .logo img {
   height: 100px; /* Adjust logo size */
@@ -39,14 +38,14 @@ body {
   text-decoration: none;
   color: black;
   padding: 10px;
-    font-size: large;
+  font-size: large;
 }
-    
+      
 .nav-list a:hover {
   background-color: #b47070;
   border-radius: 5px;
 }
-  
+    
 .form-container {
   width: 100%;
   max-width: 400px;
@@ -56,23 +55,23 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
-  
+    
 h2 {
   text-align: center;
   color: #333;
 }
-  
+    
 p {
   text-align: center;
   color: #777;
 }
-  
+    
 label {
   display: block;
   margin-bottom: 5px;
   color: #555;
 }
-  
+    
 input[type="text"], input[type="email"], input[type="password"], input[type="file"] {
   width: 100%;
   padding: 10px;
@@ -80,14 +79,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="fil
   border: 1px solid #ddd;
   border-radius: 4px;
 }
-
-.buttons{
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 30px;
-  margin-bottom: 60px;
-}
-  
+    
 .profile-modal {
   display: none; /* Initially hidden */
   position: fixed;
@@ -100,7 +92,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="fil
   justify-content: center;
   align-items: center;
 }
-  
+    
 .profile-modal-content {
   background-color: white;
   margin: 15% auto;
@@ -110,17 +102,17 @@ input[type="text"], input[type="email"], input[type="password"], input[type="fil
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-  
+    
 .profile-modal-content h2 {
   font-size: 22px;
   margin-bottom: 20px;
 }
-  
+    
 .profile-modal-content label {
   display: block;
   margin: 10px 0 5px;
 }
-  
+    
 .profile-modal-content input[type="text"], 
 .profile-modal-content input[type="email"] {
   width: 100%;
@@ -129,8 +121,8 @@ input[type="text"], input[type="email"], input[type="password"], input[type="fil
   border-radius: 5px;
   margin-bottom: 15px;
 }
-  
-button {
+    
+.save-button {
   padding: 10px 20px;
   background-color: #b35b5b;
   color: white;
@@ -138,15 +130,11 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
-  
-button:hover {
+    
+.save-button:hover {
   background-color: #df9696;
 }
-
-.profile {
-  padding-left: 30px;
-}
-
+   
 .close {
   color: #aaa;
   float: right;
@@ -154,13 +142,13 @@ button:hover {
   font-weight: bold;
   cursor: pointer;
 }
-  
+    
 .close:hover, .close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
-  
+    
 footer {
   z-index: 1;
   background-color: #c78c8c;
@@ -168,33 +156,33 @@ footer {
   justify-content: space-around; /* Space items in footer */
   padding: 20px 0;
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2); /* Inverted shadow direction */
-  position:absolute;
-  width:100%;
-  bottom:0px;
+  position: absolute; /* Ensures footer is positioned properly */
+  bottom: 0;
+  width: 100%;
 }
-  
+    
 .footLeft {
   margin: 0%;
   height: auto;
   width: 50%;
   padding-left: 2%;
 }
-  
+    
 .footLeft img {
   height: 100px; /* Adjust logo size */
   width: auto;
 }
-
+  
 .footLeft p {
   color: black;  
 }
-  
+    
 .footRight {
   margin: 0%;
   height: auto;
   width: 50%;
 }
-  
+    
 .footRight ul {
   list-style-type: none;
 }
