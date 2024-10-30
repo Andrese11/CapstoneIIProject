@@ -119,6 +119,10 @@ button:hover {
   background-color: #df9696;
 }
 
+.cart {
+  padding-left: 30px;
+}
+
 /* Cart Items */
 .cart-items {
   padding: 20px;

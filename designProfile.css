@@ -57,15 +57,27 @@ body {
   border-radius: 8px;
 }
   
-h2 {
+#welcome {
   text-align: center;
   color: #333;
 }
   
-p {
+#Please {
   text-align: center;
   color: #777;
 }
+
+.profile-section h2 {
+  text-align: center;
+  color: #333;
+}
+
+.profile-section p {
+  text-align: center;
+  color: #777;
+}
+
+
   
 label {
   display: block;
