@@ -45,7 +45,7 @@
             </div>
             <div class ="footRight">
                 <ul>
-                    <li><h2><u>Directory</u></h2></li>
+                    <li><h2><u>Directory</u></h2></li><!-- updatecomment -->
                     <li><a href="main.php">Home</a></li>
                     <li><a href="catalog.php">Products</a></li>
                     <li><a href="contactUs.php">Contact Us</a></li>
