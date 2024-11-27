@@ -21,7 +21,7 @@
         <div class="form-container">
             <h2 id="welcome"">Welcome Back!</h2>
             <p id="Please">Please login to your account.</p>
-            <form action="profile.php" method="GET">
+            <form action="PHPForms/loginCheck.php" method="POST">
                 <!-- Email -->
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" ><br>
