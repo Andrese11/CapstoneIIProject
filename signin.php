@@ -1,3 +1,8 @@
+<?php
+    session_start();
+
+    $_SESSION['userID'];
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -24,14 +29,14 @@
             <form action="PHPForms/loginCheck.php" method="POST">
                 <!-- Email -->
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" ><br>
+                <input type="email" id="email" name="email" required><br>
 
                 <!-- Password -->
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" ><br>
+                <input type="password" id="password" name="password" required><br>
 
                 <!-- Login Button -->
-                <button type="submit" id="btnLogin">Login</button>
+                <button type="submit" id="btnLogin" name ="login">Login</button>
             </form>
             <p>Don't have an account? <a href="signup.php">Sign up here</a>.</p>
         </div>

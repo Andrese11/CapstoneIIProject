@@ -1,3 +1,9 @@
+<?php
+    session_start();
+
+    $_SESSION['userID'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -21,7 +27,7 @@
         <div class="form-container">
             <h2 id="createAccount">Create Your Account</h2>
             <p id="fillInfo">Please fill in this form to create an account.</p>
-            <form action="signin.php" method="GET" enctype="multipart/form-data">
+            <form action="PHPForms/signUpUser.php" method="POST" enctype="multipart/form-data">
                 <!-- Name -->
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" ><br>
@@ -39,7 +45,7 @@
                 <input type="password" id="password" name="password" ><br>
 
                 <!-- Signup Button -->
-                <button type="submit" id="btnSignUp">Sign Up</button>
+                <button type="submit" id="btnSignUp" name="signUp">Sign Up</button>
             </form>
             <p>Already have an account? <a href="signin.php">Sign in here</a>.</p>
         </div>

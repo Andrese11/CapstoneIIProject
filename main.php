@@ -1,3 +1,9 @@
+<?php
+    session_start();
+
+    $_SESSION['userID'];
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,13 +34,13 @@
         </div> 
         <div class="advertising">
             <div class="advertising1">
-                <button onclick="window.location.href='catalog.php';"><u>The Best Prices Around!</u></button>
+                <button onclick="window.location.href='catalog.php'"><u>The Best Prices Around!</u></button>
             </div>
             <div class="advertising2">
-                <button onclick="window.location.href='cart.php';"><u>Check Out Your Shopping Cart!</u></button>
+                <button onclick="window.location.href='cart.php'"><u>Check Out Your Shopping Cart!</u></button>
             </div>
             <div class="advertising3">
-                <button onclick="window.location.href='signin.php';"><u>Visit your Profile!</u></button>
+                <button onclick="window.location.href='signin.php'"><u>Visit your Profile!</u></button>
             </div>
         </div>
         

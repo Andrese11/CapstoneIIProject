@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+
+    $_SESSION['userID']
+?><!DOCTYPE html>
 <html>
     <head>
         <title>

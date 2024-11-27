@@ -180,7 +180,7 @@ footer {
   justify-content: space-around; /* Space items in footer */
   padding: 20px 0;
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2); /* Inverted shadow direction */
-  position:absolute;
+  position:relative;
   width:100%;
   bottom:0px;
 }

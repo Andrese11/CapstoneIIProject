@@ -1,3 +1,9 @@
+<?php
+    session_start();
+
+    $_SESSION['userID'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -25,9 +31,27 @@
         <section class="profile-section">
             <h2>Account Information</h2>
             <div class="profile-info">
-                <p><strong>Name:</strong> John Doe</p>
-                <p><strong>Email:</strong> johndoe@example.com</p>
-                <p><strong>Address:</strong> 123 Cherry St, Red City, RC 12345</p>
+                <?php
+                    require "PHPForms/connect.php";
+
+                    $tsql = "SELECT * from site_user
+                    JOIN user_address
+                    JOIN address_location
+                    WHERE site_user_id = ?";
+
+                    $stmt = sqlsrv_query($conn, $tsql, array($_SESSION["userID"]));
+                    
+                    if($stmt == false) {
+                      echo 'Error';
+                    }
+                    
+                    while($obj = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                      echo '<strong>Name</strong>: ' . $obj['uFirstName'] . ' ' . $obj['uLastName'] . '</br>' . 
+                      '<strong>Phone Number</strong>: ' . $obj['phone_number'] . '</br>' . 
+                      '<strong>Email</strong>: ' . $obj['email_address'] . '</br>' . 
+                      '<strong>Address</strong>: ' . $obj['uAddress'] . ' ' . $obj['uZipCode'] . '</br>';
+                    }
+                ?>
             </div>
             <div class="buttons">
                 <a href="editProfile.php"><button class="edit-profile-button">Edit Profile</button></a>
