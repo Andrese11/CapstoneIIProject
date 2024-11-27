@@ -26,7 +26,7 @@
                 <p>If you have any questions, please don't hesitate to reach out. We're here to help!</p>
             </div>
 
-            <form class="contact-form" action="#" method="post">
+            <form class="contact-form" action="PHPForms/contactUsSendEmail.php" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -36,7 +36,7 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
 
-                <button type="submit">Send Message</button>
+                <button type="submit" name="send">Send Message</button>
             </form>
         </section>
 
