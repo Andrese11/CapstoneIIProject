@@ -1,7 +1,11 @@
 <?php
     session_start();
 
-    $_SESSION['userID'];
+    if (isset($_SESSION['userID'])) {
+        $userID = $_SESSION['userID'];
+    } else {
+        $userID = null; // or handle it as needed
+    }
 ?>
 
 <!DOCTYPE html>
@@ -36,9 +40,18 @@
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" ><br>
 
+                <label for="phone_number">Phone Number</label>
+                <input type="text" id="phone_number" name="phone_number" ><br>
+
                 <!-- Address -->
                 <label for="address">Address</label>
                 <input type="text" id="address" name="address" ><br>
+
+                <label for="postal_code">Postal Code</label>
+                <input type="text" id="postal_code" name="postal_code" ><br>
+                
+                <label for="postal_code">Postal Code</label>
+                <input type="text" id="postal_code" name="postal_code" ><br>
 
                 <!-- Password -->
                 <label for="password">Password</label>

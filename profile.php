@@ -1,7 +1,40 @@
 <?php
-    session_start();
+session_start();
 
-    $_SESSION['userID'];
+if (!isset($_SESSION['userID'])) {
+    header("Location: signin.php"); // Redirect if not logged in
+    exit;
+}
+
+require "PHPForms/connect.php";
+
+$userID = $_SESSION['userID'];
+
+$tsql = "SELECT 
+            su.username,
+            su.phone_number,
+            su.email_address,
+            al.address_line,
+            al.city,
+            al.region,
+            al.postal_code
+         FROM site_user su
+         INNER JOIN user_address ua ON su.site_user_id = ua.user_address_id
+         INNER JOIN address_location al ON ua.address_id = al.address_id
+         WHERE su.site_user_id = ?";
+
+$stmt = sqlsrv_query($conn, $tsql, array($userID));
+
+if ($stmt === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+$stmt = sqlsrv_query($conn, $tsql, array($userID));
+
+if ($stmt === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -29,54 +62,41 @@
         </header>
 
         <section class="profile-section">
-            <h2>Account Information</h2>
-            <div class="profile-info">
-                <?php
-                    require "PHPForms/connect.php";
+        <h2>Account Information</h2>
+        <div class="profile-info">
+            <?php
+            while ($obj = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                echo '<p><strong>Name</strong>: ' . htmlspecialchars($obj['username']) . '</p>' .
+                     '<p><strong>Phone Number</strong>: ' . htmlspecialchars($obj['phone_number']) . '</p>' .
+                     '<p><strong>Email</strong>: ' . htmlspecialchars($obj['email_address']) . '</p>' .
+                     '<p><strong>Address</strong>: ' . htmlspecialchars($obj['address_line']) . ' ' .
+                     htmlspecialchars($obj['city']) . ', ' . htmlspecialchars($obj['region']) . ' ' .
+                     htmlspecialchars($obj['postal_code']) . '</p>';
+            }
+            ?>
+        </div>
+        <div class="buttons">
+            <a href="editProfile.php"><button class="edit-profile-button">Edit Profile</button></a>
+        </div>
+    </section>
 
-                    $tsql = "SELECT * from site_user
-                    JOIN user_address
-                    JOIN address_location
-                    WHERE site_user_id = ?";
+    <h1 class="profile">My Orders</h1>
 
-                    $stmt = sqlsrv_query($conn, $tsql, array($_SESSION["userID"]));
-                    
-                    if($stmt == false) {
-                      echo 'Error';
-                    }
-                    
-                    while($obj = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
-                      echo '<strong>Name</strong>: ' . $obj['uFirstName'] . ' ' . $obj['uLastName'] . '</br>' . 
-                      '<strong>Phone Number</strong>: ' . $obj['phone_number'] . '</br>' . 
-                      '<strong>Email</strong>: ' . $obj['email_address'] . '</br>' . 
-                      '<strong>Address</strong>: ' . $obj['uAddress'] . ' ' . $obj['uZipCode'] . '</br>';
-                    }
-                ?>
-            </div>
-            <div class="buttons">
-                <a href="editProfile.php"><button class="edit-profile-button">Edit Profile</button></a>
-            </div>
-        </section>
-
-        <h1 class="profile">My Orders</h1>
-
-        <!-- SEE HOW TO ADD THIS SECTION -->
-        
-        <footer class="footer">
-            <div class ="footLeft">
-                <img src = "NO_BACKGROUND.png"/>
-                <p>Cherry Clothing is a website made for a senior project with no intention for commercial use.</p>
-            </div>
-            <div class ="footRight">
-                <ul>
-                    <li><h2><u>Directory</u></h2></li>
-                    <li><a href="main.php">Home</a></li>
-                    <li><a href="catalog.php">Products</a></li>
-                    <li><a href="contactUs.php">Contact Us</a></li>
-                    <li><a href="cart.php">Cart</a></li>
-                    <li><a href="signin.php">My Profile</a></li>
-                </ul>
-            </div>
-        </footer>
-    </body>
+    <footer class="footer">
+        <div class ="footLeft">
+            <img src = "NO_BACKGROUND.png"/>
+            <p>Cherry Clothing is a website made for a senior project with no intention for commercial use.</p>
+        </div>
+        <div class ="footRight">
+            <ul>
+                <li><h2><u>Directory</u></h2></li>
+                <li><a href="main.php">Home</a></li>
+                <li><a href="catalog.php">Products</a></li>
+                <li><a href="contactUs.php">Contact Us</a></li>
+                <li><a href="cart.php">Cart</a></li>
+                <li><a href="signin.php">My Profile</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
 </html>
