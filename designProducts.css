@@ -127,6 +127,18 @@ body {
   padding: 10px;
 }
 
+/* Specific rule for the #qty input field */
+#qty {
+  width: 800px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 18px; /* Adjust font size */
+  box-sizing: border-box; /* Ensure padding doesn't affect width/height */
+}
+
 .addtoCart {
   display: flex;
   margin-top: 20px;

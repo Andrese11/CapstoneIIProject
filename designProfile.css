@@ -7,16 +7,19 @@ nav {
   position: sticky; /* Make the nav sticky */
   z-index: 999; /* Ensure it stays above other content */
   top: 0; /* Stick to the top */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0; /* Optional shadow for effect */
 }
-  
+    
 body {
   margin: 0;
   background-color: #d4d1d1;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
-    
+      
 /* Styling for the logo */
 .logo img {
   height: 100px; /* Adjust logo size */
@@ -39,174 +42,76 @@ body {
   text-decoration: none;
   color: black;
   padding: 10px;
-    font-size: large;
+  font-size: large;
 }
-    
+      
 .nav-list a:hover {
   background-color: #b47070;
   border-radius: 5px;
 }
-  
-.form-container {
-  width: 100%;
-  max-width: 400px;
-  margin: 50px auto;
-  background-color: white;
-  padding: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-  
-#welcome {
-  text-align: center;
-  color: #333;
-}
-  
-#Please {
-  text-align: center;
-  color: #777;
-}
 
-.profile-section h2 {
-  text-align: center;
-  color: #333;
-}
-
-.profile-section p {
-  text-align: center;
-  color: #777;
-}
-
-
-  
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #555;
-}
-  
-input[type="text"], input[type="email"], input[type="password"], input[type="file"] {
-  width: 100%;
-  padding: 10px;
-  margin: 10px -10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.buttons{
+/* Ensure the body stretches to the full height of the viewport and beyond if needed */
+body {
+  margin: 0;
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 30px;
-  margin-bottom: 60px;
+  flex-direction: column;
+  min-height: 100vh;
 }
-  
-.profile-modal {
-  display: none; /* Initially hidden */
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  justify-content: center;
-  align-items: center;
-}
-  
-.profile-modal-content {
-  background-color: white;
-  margin: 15% auto;
+
+/* Main content section grows to fill space between header and footer */
+main {
+  flex-grow: 1;
   padding: 20px;
-  border-radius: 10px;
-  width: 400px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-  
-.profile-modal-content h2 {
-  font-size: 22px;
-  margin-bottom: 20px;
-}
-  
-.profile-modal-content label {
-  display: block;
-  margin: 10px 0 5px;
-}
-  
-.profile-modal-content input[type="text"], 
-.profile-modal-content input[type="email"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-  
-button {
-  padding: 10px 20px;
-  background-color: #b35b5b;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-  
-button:hover {
-  background-color: #df9696;
 }
 
 .profile {
-  padding-left: 30px;
+  text-align: center;
 }
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+/* Section styling */
+.profile-section, .orders-container {
+  margin: auto;
+  max-width: 800px;
+  width: 90%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
-  
-.close:hover, .close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-  
-footer {
-  z-index: 1;
-  background-color: #c78c8c;
+
+/* Footer is always at the bottom of the page */
+.footer {
   display: flex;
-  justify-content: space-around; /* Space items in footer */
-  padding: 20px 0;
-  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2); /* Inverted shadow direction */
-  position:relative;
-  width:100%;
-  bottom:0px;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #c78c8c;
+  color: black;
+  flex-shrink: 0;
 }
-  
+
 .footLeft {
   margin: 0%;
   height: auto;
   width: 50%;
   padding-left: 2%;
 }
-  
+    
 .footLeft img {
   height: 100px; /* Adjust logo size */
   width: auto;
 }
-
+  
 .footLeft p {
   color: black;  
 }
-  
+    
 .footRight {
   margin: 0%;
   height: auto;
   width: 50%;
 }
-  
+    
 .footRight ul {
   list-style-type: none;
 }

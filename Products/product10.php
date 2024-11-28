@@ -32,6 +32,7 @@
                 <img src="../Cherry Clothing Designs/Hoodies/CherryPlotionHoodie/men_cherryplotion_hoodie_back.jpg.jpg" id="Small">
             </div>
             <div class="info">
+                <form action = "PHPForms/addToCart.php" method="POST">
                 <h2><strong>Cherryplotion Hoodie for Men</strong></h2>
                 <p>Featuring vibrant splashes of color, this hoodie is perfect for those who love bold, eye-catching designs.<br></p>
                 <h4>Select your size:</h4>
@@ -47,7 +48,11 @@
                     <option value="Color">White</option>
                     <option value="Color">Green</option>
                 </select>
-                <button class = "addtoCart">Add to Cart</button>
+                <h4>Enter quantity:</h4>
+                    <input type="text" id="qty" name="qty" style="width: 150px; height: 35px; border: 1px solid red; font-size: 18px;">
+
+                    <button class = "addtoCart">Add to Cart</button>
+                </form>
             </div>
         </section>
 

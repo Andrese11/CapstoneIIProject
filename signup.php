@@ -34,28 +34,31 @@
             <form action="PHPForms/signUpUser.php" method="POST" enctype="multipart/form-data">
                 <!-- Name -->
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" ><br>
+                <input type="text" id="name" name="name" required><br>
 
                 <!-- Email -->
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" ><br>
+                <input type="email" id="email" name="email" required><br>
 
                 <label for="phone_number">Phone Number</label>
-                <input type="text" id="phone_number" name="phone_number" ><br>
+                <input type="text" id="phone_number" name="phone_number" required><br>
 
                 <!-- Address -->
                 <label for="address">Address</label>
-                <input type="text" id="address" name="address" ><br>
+                <input type="text" id="address" name="address" required><br>
+
+                <label for="State">State</label>
+                <input type="text" id="region" name="region" required><br>
+                
+                <label for="City">City</label>
+                <input type="text" id="city" name="city" required><br>
 
                 <label for="postal_code">Postal Code</label>
-                <input type="text" id="postal_code" name="postal_code" ><br>
-                
-                <label for="postal_code">Postal Code</label>
-                <input type="text" id="postal_code" name="postal_code" ><br>
+                <input type="text" id="postal_code" name="postal_code" required><br>
 
                 <!-- Password -->
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" ><br>
+                <input type="password" id="password" name="password" required><br>
 
                 <!-- Signup Button -->
                 <button type="submit" id="btnSignUp" name="signUp">Sign Up</button>

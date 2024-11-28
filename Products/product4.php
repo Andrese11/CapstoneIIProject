@@ -32,6 +32,7 @@
                 <img src="../Cherry Clothing Designs/Shirts/CherrySportShirt/men_cherry_sport_shirt_back.jpg.jpg" id="Small">
             </div>
             <div class="info">
+                <form action = "PHPForms/addToCart.php" method="POST">
                 <h2><strong>Cherry Sport Shirt for Men</strong></h2>
                 <p>A sporty and breathable shirt designed for active wear, blending comfort with a sleek, athletic.<br></p>
                 <h4>Select your size:</h4>
@@ -47,7 +48,11 @@
                     <option value="Color">White</option>
                     <option value="Color">Green</option>
                 </select>
-                <button class = "addtoCart">Add to Cart</button>
+                <h4>Enter quantity:</h4>
+                    <input type="text" id="qty" name="qty" style="width: 150px; height: 35px; border: 1px solid red; font-size: 18px;">
+
+                    <button class = "addtoCart">Add to Cart</button>
+                </form>
             </div>
         </section>
 

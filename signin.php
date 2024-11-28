@@ -16,7 +16,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cherry Clothing</title>
-        <link rel="stylesheet" href="designProfile.css">
+        <link rel="stylesheet" href="designSignUp.css">
     </head>
     <body>
         <nav>
@@ -30,7 +30,7 @@
             </ul>
         </nav>
 
-        <div class="form-container">
+        <div class="form-containers">
             <h2 id="welcome"">Welcome Back!</h2>
             <p id="Please">Please login to your account.</p>
             <form action="PHPForms/loginCheck.php" method="POST">

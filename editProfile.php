@@ -14,7 +14,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cherry Clothing</title>
-        <link rel="stylesheet" href="designProfile.css">
+        <link rel="stylesheet" href="designSignUp.css">
     </head>
     <body>
         <nav>
@@ -28,24 +28,42 @@
             </ul>
         </nav>
 
-        <header>
-            <h1>My Profile</h1>
-        </header>
-        <section class="profile-section">
-            <h2>Edit Profile</h2>
-                <form action="profile.php" method="GET">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" value="John Doe">
+        <div class="form-container">
+            <h2 id="createAccount">Edit Your Account</h2>
+            <p id="fillInfo">Please fill in this form to edit your account.</p>
+            <form action="PHPForms/editUserProfile.php" method="POST" enctype="multipart/form-data">
+                <!-- Name -->
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <!-- Email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="phone_number">Phone Number</label>
+                <input type="text" id="phone_number" name="phone_number" required><br>
+
+                <!-- Address -->
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required><br>
+
+                <label for="State">State</label>
+                <input type="text" id="region" name="region" required><br>
                 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" value="johndoe@example.com">
-                
-                    <label for="address">Address:</label>
-                    <input type="text" id="address" value="123 Cherry St, Red City, RC 12345">
-                
-                    <button type="submit" class="save-button">Save Changes</button>
-                </form>
-        </section>
+                <label for="City">City</label>
+                <input type="text" id="city" name="city" required><br>
+
+                <label for="postal_code">Postal Code</label>
+                <input type="text" id="postal_code" name="postal_code" required><br>
+
+                <!-- Password -->
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required><br>
+
+                <!-- Signup Button -->
+                <button type="submit" id="editProfile" name="editProfile">Save Changes</button>
+            </form>
+        </div>
 
         <footer class="footer">
             <div class ="footLeft">
@@ -62,6 +80,6 @@
                     <li><a href="signin.php">My Profile</a></li>
                 </ul>
             </div>
-        </footer>    
+        </footer>
     </body>
 </html>

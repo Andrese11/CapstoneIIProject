@@ -33,22 +33,27 @@
                 <img src="../Cherry Clothing Designs/Shirts/CherryPlainShirt/men_cherry_plain_shirt_back.jpg.jpg" id="Small">
             </div>
             <div class="info">
-                <h2><strong>Cherry Plain Shirt for Men</strong></h2>
-                <p>A classic, solid-colored shirt offering simplicity and versatility. Perfect for any casual or semi-casual occasion.<br></p>
-                <h4>Select your size:</h4>
-                <select class="sortItems" name="types">
-                    <option value="Size">Small</option>
-                    <option value="Size">Medium</option>
-                    <option value="Size">Large</option>
-                </select>
-                <h4>Select a color:</h4>
-                <select class="sortItems" name="types">
-                    <option value="Color">Red</option>
-                    <option value="Color">Black</option>
-                    <option value="Color">White</option>
-                    <option value="Color">Green</option>
-                </select>
-                <button class = "addtoCart">Add to Cart</button>
+                <form action = "PHPForms/addToCart.php" method="POST">
+                    <h2><strong>Cherry Plain Shirt for Men</strong></h2>
+                    <p>A classic, solid-colored shirt offering simplicity and versatility. Perfect for any casual or semi-casual occasion.<br></p>
+                    <h4>Select your size:</h4>
+                    <select class="sortItems" name="size">
+                        <option value="small" name="small">Small</option>
+                        <option value="medium" name="medium">Medium</option>
+                        <option value="large" name="large">Large</option>
+                    </select>
+                    <h4>Select a color:</h4>
+                    <select class="sortItems" name="color">
+                        <option value="red" name="red">Red</option>
+                        <option value="black" name="black">Black</option>
+                        <option value="white" name="white">White</option>
+                        <option value="green" name="green">Green</option>
+                    </select>
+                    <h4>Enter quantity:</h4>
+                    <input type="text" id="qty" name="qty" style="width: 150px; height: 35px; border: 1px solid red; font-size: 18px;">
+
+                    <button class = "addtoCart">Add to Cart</button>
+                </form>
             </div>
         </section>
 
