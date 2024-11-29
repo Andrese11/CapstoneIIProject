@@ -80,6 +80,15 @@ main {
   text-align: center;
 }
 
+button {
+  padding: 10px 20px;
+  background-color: #b35b5b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 /* Footer is always at the bottom of the page */
 .footer {
   display: flex;
