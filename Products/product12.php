@@ -6,6 +6,12 @@
     } else {
         $userID = null; // or handle it as needed
     }
+
+    if (isset($_SESSION['cartID'])) {
+        $cartID = $_SESSION['cartID'];
+    } else {
+        $cartID = 0;
+    }
 ?><!DOCTYPE html>
 <html>
     <head>
@@ -32,26 +38,28 @@
                 <img src="../Cherry Clothing Designs/Hoodies/CherrySportHoodie/men_cherry_sport_hoodie_back.jpg.jpg" id="Small">
             </div>
             <div class="info">
-                <form action = "PHPForms/addToCart.php" method="POST">
+                <form action = "../PHPForms/addToCart.php" method="POST">
                 <h2><strong>Cherry Sport Hoodie for Men</strong></h2>
                 <p>Crafted for active lifestyles, this hoodie combines athletic functionality with a sleek, sporty appearance.<br></p>
                 <h4>Select your size:</h4>
-                <select class="sortItems" name="types">
-                    <option value="Size">Small</option>
-                    <option value="Size">Medium</option>
-                    <option value="Size">Large</option>
-                </select>
-                <h4>Select a color:</h4>
-                <select class="sortItems" name="types">
-                    <option value="Color">Red</option>
-                    <option value="Color">Black</option>
-                    <option value="Color">White</option>
-                    <option value="Color">Green</option>
-                </select>
-                <h4>Enter quantity:</h4>
+                <select class="sortItems" name="size">
+                        <option value="1" name="small">Small</option>
+                        <option value="2" name="medium">Medium</option>
+                        <option value="3" name="large">Large</option>
+                    </select>
+                    <h4>Select a color:</h4>
+                    <select class="sortItems" name="color">
+                        <option value="1" name="red">Red</option>
+                        <option value="2" name="black">Black</option>
+                        <option value="3" name="white">White</option>
+                        <option value="4" name="green">Green</option>
+                    </select>
+                    <h4>Enter quantity:</h4>
                     <input type="text" id="qty" name="qty" style="width: 150px; height: 35px; border: 1px solid red; font-size: 18px;">
 
-                    <button class = "addtoCart">Add to Cart</button>
+                    <input type="hidden" name="product_code" value="12-1">
+
+                    <button class = "addtoCart" name="addToCart" >Add to Cart</button>
                 </form>
             </div>
         </section>
