@@ -35,8 +35,8 @@
 
         <section class="product">
             <div class="images">
-                <img src="../Cherry Clothing Designs/Shirts/CherryPlotionShirt/men_cherryplotion_shirt_front.jpg.jpg" id="Big">
-                <img src="../Cherry Clothing Designs/Shirts/CherryPlotionShirt/men_cherryplotion_shirt_back.jpg.jpg" id="Small">
+                <img src="../Designs/men_cherryplotion_shirt_front.jpg.jpg" id="Big">
+                <img src="../Designs/men_cherryplotion_shirt_back.jpg.jpg" id="Small">
             </div>
             <div class="info">
                 <form action = "../PHPForms/addToCart.php" method="POST">
