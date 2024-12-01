@@ -28,7 +28,7 @@ $tsql = "SELECT
          INNER JOIN Stock s ON sc.product_item_id = s.SKU
          INNER JOIN product p ON s.product_description = p.product_description
          LEFT JOIN product_image pimg ON p.product_id = pimg.product_item_id
-         WHERE sc.cart_id = ?;";
+         WHERE sc.cart_id = ? AND CAST(SUBSTRING(s.SKU, 1, CHARINDEX('-', s.SKU) - 1) AS INT) = p.product_id;";
 
 $stmt = sqlsrv_query($conn, $tsql, array($cartID));
 
@@ -40,7 +40,7 @@ $total = 0;
 $cartItems = [];
 while ($obj = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
     $cartItems[] = $obj;
-    $total += $obj['price'] * $obj['qty']; // Calculate total
+    $total += $obj['price'] * $obj['qty'];
 }
 ?>
 
@@ -102,18 +102,16 @@ while ($obj = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
 
             <label for="payment_method">Payment Method</label>
             <select name="payment_method" id="payment_method" required>
-                <option value="credit_card">Credit Card</option>
-                <option value="paypal">PayPal</option>
+                <option value="1">Credit Card</option>
+                <option value="2">PayPal</option>
             </select>
+
+            <input type="hidden" name="total" value="<?= htmlspecialchars(number_format($total, 2)) ?>">
 
             <p>Total: $<?= htmlspecialchars(number_format($total, 2)) ?></p>
 
             <button type="submit" class="checkout-btn">Complete Order</button>
         </form>
-    </section>
-
-    <section class="cart-total">
-        
     </section>
 
     <footer class="footer">

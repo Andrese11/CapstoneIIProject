@@ -68,8 +68,11 @@
                 
                 $total = 0;
 
+                $isCartEmpty = false;
+
                 if (sqlsrv_has_rows($stmt) === false) {
                     echo '<p>Your cart is empty.</p>';
+                    $isCartEmpty = true;
                 }                
 
                 while ($obj = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
@@ -93,10 +96,12 @@
                     $total += $price * $quantity;
                 }
 
+                if(!$isCartEmpty) {
                 echo "<div class=\"cart-footer\">
                         <p class=\"total\" id=\"total\">Total: $total</p>
                         <a href=\"checkout.php\"><button class=\"checkout\" id=\"checkout\">Checkout</button></a>
                     </div>";
+                }
             ?>
         </section>
 

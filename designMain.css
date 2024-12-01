@@ -227,6 +227,31 @@ body {
   width: 60%;
 }
 
+.center {
+  text-align: center; /* Center-align text inside the div */
+}
+
+a .thankYou {
+  padding: 10px 20px;
+  background-color: #b35b5b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#thankYou {
+  z-index: 1;
+  background-color: #c78c8c;
+  display: flex;
+  justify-content: space-around; /* Space items in footer */
+  padding: 20px 0;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2); /* Inverted shadow direction */
+  position: absolute; /* Ensures footer is positioned properly */
+  bottom: 0;
+  width: 100%;
+}
+
 footer {
   z-index: 1;
   background-color: #c78c8c;

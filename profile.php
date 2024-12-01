@@ -86,7 +86,7 @@ if ($stmt === false) {
                 <?php
                 $tsql = "
                         SELECT 
-                            so.order_number,
+                            so.shop_order_id,
                             ol.product_item_id,
                             ol.price,
                             so.order_status,
@@ -111,7 +111,7 @@ if ($stmt === false) {
 
                 while ($order = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
                     // Check if this is a new order
-                    if ($currentOrder !== $order['order_number']) {
+                    if ($currentOrder !== $order['shop_order_id']) {
                         // Close the previous order container, if any
                         if ($currentOrder !== null) {
                             echo '</div>'; // Close the items list container
@@ -119,9 +119,9 @@ if ($stmt === false) {
                         }
 
                         // Start a new order container
-                        $currentOrder = $order['order_number']; // Update the current order tracker
+                        $currentOrder = $order['shop_order_id']; // Update the current order tracker
                         echo '<div class="order">';
-                        echo '<h2>Order #: ' . htmlspecialchars($order['order_number']) . '</h2>';
+                        echo '<h2>Order #: ' . htmlspecialchars($order['shop_order_id']) . '</h2>';
                         echo '<p><strong>Status:</strong> ' . htmlspecialchars($order['order_status']) . '</p>';
                         echo '<p><strong>Address:</strong> ' . htmlspecialchars($order['shipping_address']) . '</p>';
                         echo '<p><strong>Date:</strong> ' . htmlspecialchars($order['order_date']->format('Y-m-d H:i:s')) . '</p>';
