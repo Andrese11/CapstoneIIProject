@@ -39,11 +39,14 @@
         <div class="advertising">
             <div class="advertising1">
                 <button onclick="window.location.href='catalog.php'"><u>The Best Prices Around!</u></button>
+                <button onclick="window.location.href='catalog.php'"><u>The Best Prices Around!</u></button>
             </div>
             <div class="advertising2">
                 <button onclick="window.location.href='cart.php'"><u>Check Out Your Shopping Cart!</u></button>
+                <button onclick="window.location.href='cart.php'"><u>Check Out Your Shopping Cart!</u></button>
             </div>
             <div class="advertising3">
+                <button onclick="window.location.href='signin.php'"><u>Visit your Profile!</u></button>
                 <button onclick="window.location.href='signin.php'"><u>Visit your Profile!</u></button>
             </div>
         </div>
@@ -55,7 +58,7 @@
             </div>
             <div class ="footRight">
                 <ul>
-                    <li><h2><u>Directory</u></h2></li>
+                    <li><h2><u>Directory</u></h2></li><!-- updatecomment -->
                     <li><a href="main.php">Home</a></li>
                     <li><a href="catalog.php">Products</a></li>
                     <li><a href="contactUs.php">Contact Us</a></li>
